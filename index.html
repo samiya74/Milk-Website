@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اذان ڈیری | خالص دودھ اور ڈیری مصنوعات</title>
+<meta name="description" content="اذان ڈیری پر خالص دودھ، دہی، مکھن، ملائی، لسی، دیسی گھی اور دیگر ڈیری مصنوعات کی معلومات حاصل کریں۔">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700;800&display=swap');
+
+:root{
+  --green:#174b35;
+  --green2:#286b49;
+  --light:#edf4e6;
+  --cream:#faf9f1;
+  --gold:#d7b66b;
+  --text:#26382d;
+  --muted:#6c7b70;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  font-family:'Noto Sans Arabic',sans-serif;
+  background:var(--cream);color:var(--text);line-height:2;
+}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1150px,92%);margin:auto}
+header{
+  position:sticky;top:0;z-index:100;
+  background:#faf9f1f5;border-bottom:1px solid #e0e7d9;
+  backdrop-filter:blur(12px)
+}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:15px;min-height:82px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--green)}
+.logo-icon{
+  width:48px;height:48px;border-radius:15px;
+  background:var(--green);color:white;display:grid;place-items:center;font-size:27px
+}
+.logo h2{font-size:23px;line-height:1.5}
+.logo small{font-size:10px;letter-spacing:1px;color:var(--muted)}
+.links{display:flex;align-items:center;gap:17px}
+.links a{font-size:12px;font-weight:700}
+.links a:hover{color:#73934b}
+.btn{
+  display:inline-flex;justify-content:center;align-items:center;gap:7px;
+  border:0;border-radius:11px;padding:11px 19px;font-size:13px;
+  font-weight:800;cursor:pointer;transition:.2s
+}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:var(--green);color:white}
+.whatsapp{background:#168b53;color:white}
+.outline{border:1px solid #c5d3c1;color:var(--green);background:transparent}
+.menu{display:none;border:0;background:none;color:var(--green);font-size:25px}
+
+.hero{padding:65px 0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px}
+.tag{display:inline-block;border-radius:30px;background:#e6efd9;color:var(--green);padding:5px 15px;font-size:12px;font-weight:800}
+.hero h1{
+  color:var(--green);font-size:clamp(35px,5vw,61px);
+  line-height:1.65;margin:15px 0
+}
+.hero h1 span{color:#86a64f}
+.hero p{font-size:15px;color:var(--muted);line-height:2.3}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.hero-image{
+  min-height:380px;border-radius:30px;
+  background:linear-gradient(145deg,#e5efcf,#b7d393);
+  display:grid;place-items:center;position:relative;overflow:hidden
+}
+.hero-image:before{
+  content:"";width:300px;height:300px;background:#faf9ef;
+  border-radius:50%;position:absolute;opacity:.8
+}
+.hero-emoji{font-size:145px;position:relative;z-index:2;filter:drop-shadow(0 15px 15px #31552d22)}
+.floating{
+  position:absolute;z-index:3;background:white;padding:10px 15px;
+  border-radius:13px;font-size:12px;font-weight:800;box-shadow:0 7px 22px #234b291c
+}
+.float1{top:25px;right:20px}
+.float2{bottom:25px;left:20px}
+
+.benefits{background:var(--green);color:white;padding:22px 0}
+.benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;text-align:center}
+.benefits-grid div{font-size:13px;font-weight:700}
+.benefits-grid span{display:block;font-size:25px}
+
+section{padding:75px 0}
+.heading{text-align:center;max-width:700px;margin:0 auto 38px}
+.heading small{color:#79994c;font-weight:800}
+.heading h2{font-size:clamp(27px,4vw,39px);color:var(--green);margin:8px 0}
+.heading p{font-size:13px;color:var(--muted)}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product{
+  background:white;border:1px solid #e5e9df;border-radius:20px;
+  padding:20px;transition:.25s
+}
+.product:hover{transform:translateY(-5px);box-shadow:0 15px 35px #24482a12}
+.product-img{
+  height:155px;border-radius:15px;background:#eff4e6;
+  display:grid;place-items:center;font-size:75px;margin-bottom:14px
+}
+.product:nth-child(3n+2) .product-img{background:#f5eddd}
+.product:nth-child(3n) .product-img{background:#eaf1ed}
+.product h3{font-size:19px;color:var(--green)}
+.product p{font-size:12px;color:var(--muted);min-height:65px}
+.product-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px}
+.contact-price{font-size:12px;color:var(--green);font-weight:800}
+.small-btn{border:0;border-radius:9px;background:var(--green);color:white;padding:8px 12px;font-size:12px;font-weight:700}
+.about{background:#edf2e6}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-art{min-height:330px;border-radius:25px;background:#dce9c9;display:grid;place-items:center;font-size:115px}
+.about h2{font-size:35px;color:var(--green);line-height:1.8;margin:12px 0}
+.about p{font-size:14px;color:var(--muted)}
+.points{display:grid;gap:12px;margin-top:20px}
+.point{display:flex;align-items:flex-start;gap:12px;font-size:13px}
+.tick{background:#d6e7c5;color:var(--green);min-width:28px;height:28px;border-radius:50%;text-align:center;font-weight:800}
+
+.nutrition-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.nutrient{background:white;border:1px solid #e5e9df;border-radius:17px;padding:21px}
+.nutrient span{font-size:30px}
+.nutrient h3{color:var(--green);font-size:17px;margin:6px 0}
+.nutrient p{font-size:12px;color:var(--muted)}
+.note{margin-top:22px;padding:17px;background:#f3eddb;color:#655a39;border-radius:12px;font-size:12px}
+
+.quality{background:var(--green);color:white}
+.quality .heading h2{color:white}
+.quality .heading p{color:#d3e0d5}
+.quality .heading small{color:#d7eea9}
+.quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quality-card{border:1px solid #ffffff30;border-radius:17px;padding:22px;background:#ffffff08}
+.quality-card span{font-size:30px}
+.quality-card h3{font-size:17px;margin:8px 0}
+.quality-card p{font-size:12px;color:#d3e0d5}
+
+.order-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:25px;align-items:start}
+.order-info{padding:25px;border-radius:20px;background:#e9f0df}
+.order-info h3{font-size:25px;color:var(--green);margin-bottom:10px}
+.order-info p{font-size:13px;color:var(--muted)}
+.order-form{padding:25px;background:white;border:1px solid #e4e8df;border-radius:20px}
+.order-form h3{font-size:22px;color:var(--green)}
+.order-form>p{font-size:12px;color:var(--muted);margin-bottom:15px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;font-weight:800;margin-bottom:5px}
+.field input,.field select,.field textarea{
+  width:100%;padding:11px;border:1px solid #dce3d7;border-radius:9px;
+  outline:none;background:white;font-size:13px
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green)}
+.field textarea{min-height:80px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.total{display:flex;justify-content:space-between;background:#edf3e5;padding:12px;border-radius:10px;margin-bottom:15px;font-size:13px}
+.total strong{color:var(--green)}
+.faq{max-width:800px;margin:auto;display:grid;gap:12px}
+details{background:white;border:1px solid #e3e8de;border-radius:12px;padding:15px 19px}
+summary{font-size:14px;color:var(--green);font-weight:800;cursor:pointer}
+details p{font-size:13px;color:var(--muted);padding-top:10px}
+
+.contact-box{
+  padding:30px;background:#e5edd9;border-radius:23px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.contact-box h2{color:var(--green);font-size:28px}
+.contact-box p{font-size:13px;color:var(--muted)}
+.phone{font-weight:800;direction:ltr;display:inline-block;margin-top:8px;color:var(--green)}
+
+footer{background:#103b29;color:white;padding:40px 0 18px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;padding-bottom:25px}
+footer h3{font-size:21px}
+footer h4{margin-bottom:10px}
+footer p,footer a{font-size:12px;color:#d1dfd4}
+.footer-links{display:grid;gap:7px}
+.copyright{border-top:1px solid #ffffff2a;padding-top:15px;text-align:center;font-size:11px;color:#d1dfd4}
+.float-contact{
+  position:fixed;bottom:18px;left:18px;z-index:90;
+  background:#168b53;color:white;border-radius:40px;
+  padding:11px 17px;font-size:12px;font-weight:800;box-shadow:0 5px 20px #123b2530
+}
+@media(max-width:850px){
+  .links{gap:9px}
+  .links a{font-size:10px}
+  .hero-grid{gap:20px}
+  .products{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+  .nav{min-height:70px}
+  .menu{display:block}
+  .nav>.primary{display:none}
+  .links{
+    display:none;position:absolute;top:70px;right:0;left:0;
+    padding:15px 5%;background:var(--cream);
+    flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid #ddd
+  }
+  .links.open{display:flex}
+  .links a{font-size:14px;padding:8px 0}
+  .hero{padding:35px 0}
+  .hero-grid,.about-grid,.order-grid{grid-template-columns:1fr}
+  .hero h1{font-size:39px}
+  .hero-image{min-height:280px}
+  .hero-emoji{font-size:110px}
+  .benefits-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  section{padding:52px 0}
+  .products{gap:12px}
+  .product{padding:12px}
+  .product-img{height:110px;font-size:55px}
+  .product h3{font-size:15px}
+  .product p{font-size:11px;min-height:82px}
+  .product-foot{align-items:flex-start;flex-direction:column}
+  .small-btn{width:100%}
+  .nutrition-grid,.quality-grid{grid-template-columns:1fr}
+  .about-art{min-height:230px}
+  .about h2{font-size:29px}
+  .row{grid-template-columns:1fr;gap:0}
+  .contact-box{flex-direction:column;align-items:flex-start;padding:22px}
+  .contact-box h2{font-size:23px}
+  .footer-grid{grid-template-columns:1fr;gap:22px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <div class="logo-icon">🥛</div>
+      <div><h2>اذان ڈیری</h2><small>خالص دودھ، قدرتی غذائیت</small></div>
+    </a>
+    <button class="menu" id="menu" aria-label="مینو کھولیں">☰</button>
+    <nav class="links" id="links">
+      <a href="#home">ہوم</a>
+      <a href="#products">ہماری مصنوعات</a>
+      <a href="#about">ہمارے بارے میں</a>
+      <a href="#milk">دودھ کی غذائیت</a>
+      <a href="#quality">معیار</a>
+      <a href="#order">آرڈر</a>
+      <a href="#contact">رابطہ</a>
+    </nav>
+    <a class="btn primary" href="#order">آرڈر کریں</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">🌿 آپ کے گھر کی روزمرہ ضرورت</span>
+      <h1>اذان ڈیری<br>خالص دودھ، <span>بہتر زندگی</span></h1>
+      <p>خوش آمدید اذان ڈیری میں! دودھ اور دودھ سے بنی مختلف مصنوعات کے بارے میں معلومات حاصل کریں۔ ہماری کوشش ہے کہ آپ کو مصنوعات، غذائیت اور محفوظ استعمال کے بارے میں واضح معلومات ملیں۔</p>
+      <div class="actions">
+        <a class="btn primary" href="#products">مصنوعات دیکھیں ←</a>
+        <a class="btn whatsapp" href="https://wa.me/923213206137?text=%D8%A7%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85%D8%8C%20%D9%85%D8%AC%DA%BE%DB%92%20%D8%A7%D8%B0%D8%A7%D9%86%20%DA%88%DB%8C%D8%B1%DB%8C%20%DA%A9%DB%8C%20%D9%85%D8%B5%D9%86%D9%88%D8%B9%D8%A7%D8%AA%20%DA%A9%DB%8C%20%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA%20%DA%86%D8%A7%DB%81%DB%8C%DB%92" target="_blank" rel="noopener">واٹس ایپ پر رابطہ کریں</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="floating float1">🌿 قدرتی غذائیت</div>
+      <div class="hero-emoji">🥛🐄</div>
+      <div class="floating float2">اذان ڈیری • آپ کی خدمت میں</div>
+    </div>
+  </div>
+</section>
+
+<div class="benefits">
+  <div class="container benefits-grid">
+    <div><span>🥛</span>دودھ اور ڈیری مصنوعات</div>
+    <div><span>🧼</span>صفائی کا خیال</div>
+    <div><span>❄️</span>مناسب ٹھنڈا ذخیرہ</div>
+    <div><span>💚</span>بہتر کسٹمر سروس</div>
+  </div>
+</div>
+
+<section id="products">
+  <div class="container">
+    <div class="heading">
+      <small>ہماری مصنوعات</small>
+      <h2>دودھ سے بنی مزیدار چیزیں</h2>
+      <p>اپنی پسند کی چیز منتخب کریں اور قیمت، دستیابی اور ڈیلیوری کے لیے ہم سے رابطہ کریں۔</p>
+    </div>
+    <div class="products" id="productsGrid"></div>
+    <p style="text-align:center;font-size:11px;color:#718078;margin-top:20px">قیمتیں یہاں شامل نہیں کی گئی ہیں کیونکہ اصل قیمتیں دکان سے تصدیق کرنا ضروری ہے۔</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-art">🐄🥛🌿</div>
+    <div>
+      <span class="tag">ہمارا تعارف</span>
+      <h2>اذان ڈیری — دودھ اور معیار کی معلومات</h2>
+      <p>دودھ روزمرہ غذا کا اہم حصہ ہو سکتا ہے۔ اسی لیے دودھ کی ترکیب، اس کے غذائی اجزا، صفائی اور مناسب ذخیرہ کرنے کے طریقے جاننا ضروری ہے۔ اذان ڈیری کی ویب سائٹ کا مقصد آپ کو یہ معلومات آسان اردو میں فراہم کرنا ہے۔</p>
+      <div class="points">
+        <div class="point"><span class="tick">✓</span><div><b>مصنوعات کی معلومات</b><br>دودھ، دہی، مکھن، ملائی اور دیگر مصنوعات کی تفصیل۔</div></div>
+        <div class="point"><span class="tick">✓</span><div><b>صفائی اور حفاظت</b><br>صاف برتن اور مناسب درجۂ حرارت کی اہمیت۔</div></div>
+        <div class="point"><span class="tick">✓</span><div><b>شفاف معلومات</b><br>دودھ کی خالص ہونے کی تصدیق کے لیے مناسب جانچ ضروری ہے۔</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="milk">
+  <div class="container">
+    <div class="heading">
+      <small>دودھ کو جانیں</small>
+      <h2>خالص دودھ میں کیا کیا ہوتا ہے؟</h2>
+      <p>گائے اور بھینس کے دودھ میں پانی، پروٹین، چکنائی، قدرتی شکر، معدنیات اور وٹامنز مختلف مقدار میں پائے جاتے ہیں۔</p>
+    </div>
+    <div class="nutrition-grid">
+      <article class="nutrient"><span>💧</span><h3>پانی</h3><p>دودھ کا سب سے بڑا حصہ پانی ہوتا ہے، جو اس کی قدرتی ترکیب کا بنیادی جز ہے۔</p></article>
+      <article class="nutrient"><span>💪</span><h3>پروٹین</h3><p>کیسین اور وہے پروٹین جسم کے ٹشوز کی تعمیر اور دیکھ بھال میں مدد دیتے ہیں۔</p></article>
+      <article class="nutrient"><span>🧈</span><h3>دودھ کی چکنائی</h3><p>توانائی فراہم کرتی ہے اور دودھ کی کریمی ساخت اور ذائقے میں حصہ لیتی ہے۔</p></article>
+      <article class="nutrient"><span>⚡</span><h3>لیکٹوز</h3><p>یہ دودھ میں قدرتی طور پر موجود شکر ہے، جو کاربوہائیڈریٹ کا اہم ذریعہ ہے۔</p></article>
+      <article class="nutrient"><span>🦴</span><h3>کیلشیم اور فاسفورس</h3><p>یہ معدنیات ہڈیوں اور دانتوں کی معمول کی صحت کے لیے اہم ہیں۔</p></article>
+      <article class="nutrient"><span>🌟</span><h3>وٹامنز</h3><p>دودھ میں وٹامن بی 12، رائبوفلیون اور دیگر وٹامنز مختلف مقدار میں ہو سکتے ہیں۔</p></article>
+      <article class="nutrient"><span>🍃</span><h3>پوٹاشیم</h3><p>یہ ایک معدنی جز ہے جو جسم کے معمول کے افعال میں کردار ادا کرتا ہے۔</p></article>
+      <article class="nutrient"><span>🔬</span><h3>قدرتی خامرے</h3><p>دودھ میں کچھ قدرتی خامرے بھی موجود ہو سکتے ہیں، جن کی سرگرمی مختلف عوامل سے بدلتی ہے۔</p></article>
+      <article class="nutrient"><span>🥛</span><h3>دیگر معدنیات</h3><p>دودھ میں میگنیشیم، زنک اور دیگر اجزا معمولی مقدار میں موجود ہو سکتے ہیں۔</p></article>
+    </div>
+    <div class="note"><b>اہم معلومات:</b> گائے اور بھینس کے دودھ کی چکنائی اور دیگر اجزا ایک جیسے نہیں ہوتے۔ جانور کی نسل، خوراک اور دودھ کے پراسیس کرنے کے طریقے سے مقدار بدل سکتی ہے۔</div>
+  </div>
+</section>
+
+<section style="background:#f0f3e8">
+  <div class="container">
+    <div class="heading">
+      <small>دودھ کی اقسام</small>
+      <h2>گائے کا دودھ یا بھینس کا دودھ؟</h2>
+      <p>دونوں دودھ غذائیت فراہم کرتے ہیں، لیکن ان کی ترکیب میں فرق ہو سکتا ہے۔</p>
+    </div>
+    <div class="nutrition-grid">
+      <article class="nutrient"><span>🐄</span><h3>گائے کا دودھ</h3><p>عام طور پر بھینس کے دودھ کی نسبت کم چکنائی والا اور ساخت میں نسبتاً ہلکا ہوتا ہے۔ اصل مقدار مختلف ہو سکتی ہے۔</p></article>
+      <article class="nutrient"><span>🐃</span><h3>بھینس کا دودھ</h3><p>عام طور پر اس میں چکنائی اور کل ٹھوس اجزا زیادہ ہوتے ہیں، اس لیے یہ زیادہ گاڑھا محسوس ہو سکتا ہے۔</p></article>
+      <article class="nutrient"><span>🥛</span><h3>دودھ کی خالصیت</h3><p>صرف رنگ، گاڑھے پن یا ذائقے سے خالص ہونے کا فیصلہ نہیں کیا جا سکتا۔ مناسب لیبارٹری ٹیسٹ زیادہ قابلِ اعتماد ہیں۔</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="quality" id="quality">
+  <div class="container">
+    <div class="heading">
+      <small>معیار اور حفاظت</small>
+      <h2>خالص دودھ کی پہچان کیسے ہوتی ہے؟</h2>
+      <p>دودھ کی درست جانچ، صفائی اور مناسب ذخیرہ کرنا اس کے معیار کے لیے ضروری ہیں۔</p>
+    </div>
+    <div class="quality-grid">
+      <article class="quality-card"><span>🔬</span><h3>لیبارٹری ٹیسٹ</h3><p>دودھ کی ترکیب، ملاوٹ اور ممکنہ آلودگی کی جانچ مناسب ٹیسٹ سے کی جاتی ہے۔</p></article>
+      <article class="quality-card"><span>🧼</span><h3>صفائی</h3><p>صاف برتن، صاف آلات اور محفوظ طریقے سے دودھ سنبھالنا آلودگی کے خطرے کو کم کرتا ہے۔</p></article>
+      <article class="quality-card"><span>❄️</span><h3>درست ذخیرہ</h3><p>دودھ کو فریج میں 4 ڈگری سینٹی گریڈ یا اس سے کم درجۂ حرارت پر رکھیں۔</p></article>
+    </div>
+    <p style="text-align:center;font-size:12px;color:#d4e0d5;margin-top:25px">صرف گھریلو ٹوٹکوں، رنگ یا بو سے دودھ کے خالص اور محفوظ ہونے کی ضمانت نہیں ملتی۔ کچا دودھ استعمال کرنے سے پہلے اچھی طرح ابالیں؛ جہاں ممکن ہو پاسچرائزڈ دودھ استعمال کریں۔</p>
+  </div>
+</section>
+
+<section id="order">
+  <div class="container">
+    <div class="heading">
+      <small>آرڈر اور رابطہ</small>
+      <h2>اپنی پسند کی چیز کا آرڈر دیں</h2>
+      <p>نیچے اپنی تفصیلات لکھیں۔ آپ کا آرڈر واٹس ایپ پر بھیجنے کے لیے تیار ہو جائے گا۔</p>
+    </div>
+    <div class="order-grid">
+      <div class="order-info">
+        <h3>ہم سے رابطہ کریں</h3>
+        <p>دودھ یا کسی بھی ڈیری پروڈکٹ کی دستیابی، قیمت اور ڈیلیوری کے متعلق پوچھنے کے لیے واٹس ایپ پر پیغام بھیجیں۔</p>
+        <div class="point" style="margin-top:20px"><span>📱</span><div><b>فون نمبر</b><br><span dir="ltr">03213206137</span></div></div>
+        <div class="point" style="margin-top:17px"><span>💬</span><div><b>واٹس ایپ</b><br>براہِ راست پیغام بھیجیں۔</div></div>
+        <a class="btn whatsapp" style="width:100%;margin-top:24px" href="https://wa.me/923213206137" target="_blank" rel="noopener">واٹس ایپ کھولیں ↗</a>
+      </div>
+      <form class="order-form" id="orderForm">
+        <h3>آرڈر کی تفصیلات</h3>
+        <p>اپنی معلومات درج کریں تاکہ آرڈر کا پیغام تیار ہو سکے۔</p>
+        <div class="field"><label for="customer">آپ کا نام</label><input id="customer" required placeholder="اپنا نام لکھیں"></div>
+        <div class="field"><label for="phone">رابطہ نمبر</label><input id="phone" required type="tel" placeholder="03XX XXXXXXX"></div>
+        <div class="field"><label for="product">مصنوعات منتخب کریں</label>
+          <select id="product" required></select>
+        </div>
+        <div class="row">
+          <div class="field"><label for="qty">مقدار</label><input id="qty" type="number" min="1" max="100" value="1" required></div>
+          <div class="field"><label for="unit">اکائی</label><input id="unit" readonly></div>
+        </div>
+        <div class="field"><label for="address">گھر کا پتہ / علاقہ</label><textarea id="address" required placeholder="اپنا علاقہ اور پتہ لکھیں"></textarea></div>
+        <div class="field"><label for="notes">اضافی ہدایات (اختیاری)</label><input id="notes" placeholder="کوئی ضروری بات"></div>
+        <button class="btn primary" type="submit" style="width:100%">واٹس ایپ پر آرڈر بھیجیں ↗</button>
+        <p id="status" style="font-size:12px;margin-top:12px;color:var(--green)" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="heading">
+      <small>اکثر پوچھے جانے والے سوالات</small>
+      <h2>آپ کے سوالات، آسان جوابات</h2>
+    </div>
+    <div class="faq">
+      <details><summary>خالص دودھ میں کون سے اجزا ہوتے ہیں؟</summary><p>پانی، پروٹین، چکنائی، لیکٹوز، کیلشیم، فاسفورس، پوٹاشیم اور مختلف وٹامنز۔ ان کی مقدار دودھ کی قسم کے مطابق بدلتی ہے۔</p></details>
+      <details><summary>کیا صرف گاڑھے دودھ کو خالص کہا جا سکتا ہے؟</summary><p>نہیں۔ دودھ کا گاڑھا پن خالص ہونے کا قابلِ اعتماد ثبوت نہیں۔ ملاوٹ اور ترکیب جانچنے کے لیے مناسب ٹیسٹ ضروری ہیں۔</p></details>
+      <details><summary>کیا دودھ ابالنے سے ہر قسم کی ملاوٹ ختم ہو جاتی ہے؟</summary><p>نہیں۔ ابالنے سے بہت سے نقصان دہ جراثیم کم ہو سکتے ہیں، لیکن تمام کیمیائی آلودگیاں یا ملاوٹ ختم ہونے کی ضمانت نہیں۔</p></details>
+      <details><summary>دودھ کو کیسے محفوظ رکھیں؟</summary><p>دودھ کو 4 ڈگری سینٹی گریڈ یا اس سے کم پر فریج میں رکھیں، صاف برتن استعمال کریں اور اسے زیادہ دیر باہر نہ چھوڑیں۔</p></details>
+      <details><summary>کیا اذان ڈیری گھر پر ڈیلیوری کرتی ہے؟</summary><p>ڈیلیوری کے علاقے، دستیابی اور اخراجات کی تصدیق کے لیے دیے گئے واٹس ایپ نمبر پر رابطہ کریں۔</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:10px">
+  <div class="container">
+    <div class="contact-box">
+      <div>
+        <h2>اذان ڈیری سے رابطہ کریں</h2>
+        <p>دودھ، دہی، مکھن، ملائی، لسی، دیسی گھی اور دیگر مصنوعات کے بارے میں پوچھیں۔</p>
+        <a class="phone" href="tel:+923213206137">03213206137</a>
+      </div>
+      <a class="btn whatsapp" href="https://wa.me/923213206137" target="_blank" rel="noopener">ابھی واٹس ایپ کریں ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>🥛 اذان ڈیری</h3>
+        <p>دودھ اور ڈیری مصنوعات کی معلومات کے لیے آپ کی ویب سائٹ۔ ہمارا مقصد واضح معلومات اور آسان رابطہ فراہم کرنا ہے۔</p>
+      </div>
+      <div>
+        <h4>اہم لنکس</h4>
+        <div class="footer-links">
+          <a href="#products">ہماری مصنوعات</a>
+          <a href="#milk">دودھ کی غذائیت</a>
+          <a href="#quality">معیار اور حفاظت</a>
+          <a href="#order">آرڈر کریں</a>
+        </div>
+      </div>
+      <div>
+        <h4>رابطہ</h4>
+        <div class="footer-links">
+          <a href="tel:+923213206137" dir="ltr">03213206137</a>
+          <a href="https://wa.me/923213206137" target="_blank" rel="noopener">واٹس ایپ پر رابطہ</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> اذان ڈیری — جملہ حقوق محفوظ ہیں۔</div>
+  </div>
+</footer>
+
+<a class="float-contact" href="https://wa.me/923213206137" target="_blank" rel="noopener">💬 واٹس ایپ رابطہ</a>
+
+<script>
+const dairyProducts = [
+  {name:"خالص دودھ",unit:"لیٹر",emoji:"🥛",desc:"گائے یا بھینس کے دودھ کی دستیابی اور قیمت کے لیے رابطہ کریں۔"},
+  {name:"تازہ دہی",unit:"کلو",emoji:"🥣",desc:"روزمرہ کھانوں اور گھر کے استعمال کے لیے دہی۔"},
+  {name:"دیسی مکھن",unit:"کلو",emoji:"🧈",desc:"مکھن کی دستیابی اور موجودہ قیمت معلوم کریں۔"},
+  {name:"تازہ ملائی",unit:"کلو",emoji:"🍶",desc:"دودھ سے حاصل ہونے والی کریمی ملائی۔"},
+  {name:"دیسی گھی",unit:"کلو",emoji:"🫙",desc:"کھانا پکانے کے لیے روایتی گھی۔"},
+  {name:"تازہ لسی",unit:"لیٹر",emoji:"🥤",desc:"دہی سے تیار ہونے والا مشروب۔"},
+  {name:"پنیر",unit:"کلو",emoji:"🧀",desc:"مختلف کھانوں میں استعمال ہونے والی ڈیری مصنوعات۔"},
+  {name:"کھویا",unit:"کلو",emoji:"🍮",desc:"مٹھائیوں اور میٹھے پکوانوں کے لیے دودھ سے تیار کردہ چیز۔"},
+  {name:"مختلف ڈیری مصنوعات",unit:"آئٹم",emoji:"🐄",desc:"دیگر مصنوعات اور ان کی دستیابی کے لیے ہم سے رابطہ کریں۔"}
+];
+
+const grid = document.getElementById("productsGrid");
+const select = document.getElementById("product");
+const qty = document.getElementById("qty");
+const unit = document.getElementById("unit");
+
+grid.innerHTML = dairyProducts.map((p,i)=>`
+  <article class="product">
+    <div class="product-img">${p.emoji}</div>
+    <h3>${p.name}</h3>
+    <p>${p.desc}</p>
+    <div class="product-foot">
+      <span class="contact-price">قیمت معلوم کریں</span>
+      <button class="small-btn" type="button" data-product="${i}">رابطہ کریں</button>
+    </div>
+  </article>
+`).join("");
+
+select.innerHTML = dairyProducts.map((p,i)=>
+  `<option value="${i}">${p.name}</option>`
+).join("");
+
+function updateUnit(){
+  const p = dairyProducts[Number(select.value)] || dairyProducts[0];
+  unit.value = p.unit;
+}
+select.addEventListener("change",updateUnit);
+updateUnit();
+
+grid.addEventListener("click",e=>{
+  const btn=e.target.closest("[data-product]");
+  if(!btn)return;
+  select.value=btn.dataset.product;
+  updateUnit();
+  document.getElementById("order").scrollIntoView({behavior:"smooth"});
+});
+
+document.getElementById("menu").addEventListener("click",()=>{
+  document.getElementById("links").classList.toggle("open");
+});
+
+document.querySelectorAll("#links a").forEach(a=>{
+  a.addEventListener("click",()=>{
+    document.getElementById("links").classList.remove("open");
+  });
+});
+
+document.getElementById("orderForm").addEventListener("submit",e=>{
+  e.preventDefault();
+
+  const name=document.getElementById("customer").value.trim();
+  const phone=document.getElementById("phone").value.trim();
+  const address=document.getElementById("address").value.trim();
+  const notes=document.getElementById("notes").value.trim();
+  const p=dairyProducts[Number(select.value)] || dairyProducts[0];
+  const amount=Number(qty.value);
+
+  if(!name || !phone || !address || !Number.isInteger(amount) || amount<1 || amount>100){
+    document.getElementById("status").textContent="براہِ کرم تمام ضروری معلومات درست درج کریں۔";
+    return;
+  }
+
+  const message=[
+    "السلام علیکم! مجھے اذان ڈیری سے آرڈر دینا ہے۔",
+    "",
+    "نام: "+name,
+    "رابطہ نمبر: "+phone,
+    "مصنوعات: "+p.name,
+    "مقدار: "+amount+" "+p.unit,
+    "پتہ: "+address,
+    "اضافی ہدایات: "+(notes || "کوئی نہیں"),
+    "",
+    "براہِ کرم قیمت اور دستیابی کی تصدیق کر دیں۔"
+  ].join("\n");
+
+  document.getElementById("status").textContent="واٹس ایپ کھولا جا رہا ہے۔ اپنا پیغام دیکھ کر بھیج دیں۔";
+  window.open("https://wa.me/923213206137?text="+encodeURIComponent(message),"_blank");
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
